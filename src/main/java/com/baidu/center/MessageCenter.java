@@ -49,7 +49,7 @@ public class MessageCenter {
      */
     private List<MessageSender> messageSenderList;
 
-    private static MessageCenter instance;
+    private static volatile MessageCenter instance;
 
     private MessageCenter() {
         this.messageQueueMap = new ConcurrentHashMap<>();
